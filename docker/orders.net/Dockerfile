@@ -21,6 +21,7 @@ CORECLR_NEWRELIC_HOME=/usr/local/newrelic-netcore20-agent \
 CORECLR_PROFILER_PATH=/usr/local/newrelic-netcore20-agent/libNewRelicProfiler.so
 
 ENV NEW_RELIC_LOG=stdout
+RUN mkdir -p /.dotnet /.nuget && chmod 777 /.dotnet /.nuget /app -R
 
 RUN ["dotnet", "build"]
 
