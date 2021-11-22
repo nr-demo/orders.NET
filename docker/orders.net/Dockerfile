@@ -20,6 +20,8 @@ CORECLR_PROFILER={36032161-FFC0-4B61-B559-F6C5D41BAE5A} \
 CORECLR_NEWRELIC_HOME=/usr/local/newrelic-netcore20-agent \
 CORECLR_PROFILER_PATH=/usr/local/newrelic-netcore20-agent/libNewRelicProfiler.so
 
+ENV NEW_RELIC_LOG=stdout
+
 RUN ["dotnet", "build"]
 
 EXPOSE 80/tcp
